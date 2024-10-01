@@ -1,3 +1,9 @@
+import Header from "./components/Header";
+
 export default function App() {
-  return <h1 className="text-red-600">Hello React</h1>;
+  return (
+    <div className="flex h-full">
+      <Header />
+    </div>
+  );
 }
