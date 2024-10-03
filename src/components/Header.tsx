@@ -5,7 +5,7 @@ type HeaderProps = {};
 
 export default function Header({}: HeaderProps) {
   return (
-    <div className="w-full flex justify-evenly items-center p-4 shadow-lg">
+    <div className="max-lg:hidden w-full flex justify-evenly items-center p-4 shadow-lg">
       <div className="flex justify-start items-center gap-3 w-1/3">
         <a href="#">
           <img className="w-10" src={MajorekIcon} alt="majorek's duck icon" />
@@ -13,7 +13,7 @@ export default function Header({}: HeaderProps) {
         <h1 className="text-2xl w-1/3">majorek</h1>
       </div>
 
-      <ul className="flex justify-center w-1/3 items-center list-none space-x-16">
+      <ul className="flex justify-center w-1/3 items-center list-none gap-8">
         <li className="text-lg">About me</li>
         <li className="text-lg">My projects</li>
         <li className="text-lg">Contact</li>
