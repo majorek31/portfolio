@@ -1,4 +1,4 @@
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useModal } from "../contexts/modalContext";
 
