@@ -36,6 +36,7 @@ export function ModalProvider({ children }: ModalProviderType) {
 
   const closeModal = () => {
     setIsOpen(false);
+    setTitle(null);
     setModalContent(null);
   };
 
