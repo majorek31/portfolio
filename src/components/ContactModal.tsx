@@ -1,5 +1,4 @@
 import { FormEvent, useState } from "react";
-import { useModal } from "../contexts/modalContext";
 
 export default function ContactModal() {
   const [message, setMessage] = useState("");
@@ -7,7 +6,6 @@ export default function ContactModal() {
   const [hasAgreement, setHasAgreement] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const { closeModal } = useModal();
   const onFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
