@@ -1,15 +1,27 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useModal } from "../contexts/modalContext";
 
 export default function ContactModal() {
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
   const [hasAgreement, setHasAgreement] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const { closeModal } = useModal();
 
   const onFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
-    // closeModal();
+    await emailjs.send(
+      "service_gy75jui",
+      "template_36zrd8p",
+      { from_name: email, message },
+      {
+        publicKey: "md8Die0koFRufF49t",
+      },
+    );
+    setIsLoading(false);
+    closeModal();
   };
   return (
     <>
