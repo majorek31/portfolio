@@ -1,5 +1,5 @@
 import { useModal } from "../contexts/modalContext";
-import ContactModal from "./ContactModal";
+import ContactModal from "./modals/ContactModal";
 
 type AboutMeProps = {};
 
