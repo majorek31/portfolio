@@ -1,4 +1,11 @@
-import { createContext, ReactNode, useContext, useEffect, useRef, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 import CloseCross from "../assets/cross.svg";
 
@@ -32,7 +39,7 @@ export function ModalProvider({ children }: ModalProviderType) {
     setIsOpen(false);
     setModalContent(null);
   };
-  
+
   useEffect(() => {
     const handleKeydown = (e: KeyboardEvent) => {
       if (e.key == "Escape") closeModal();

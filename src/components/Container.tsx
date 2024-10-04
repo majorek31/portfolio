@@ -1,3 +1,4 @@
+import React from "react";
 import { ReactNode } from "react";
 
 type ContainerProps = {
@@ -5,5 +6,7 @@ type ContainerProps = {
 };
 
 export default function Container({ children }: ContainerProps) {
-  return <div className="">{children}</div>;
+  return (
+    <div className="h-full w-full flex p-4 flex-col items-star">{children}</div>
+  );
 }
