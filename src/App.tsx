@@ -3,6 +3,7 @@ import AboutMe from "./components/AboutMe";
 import Container from "./components/Container";
 import InfoCard from "./components/InfoCard";
 import Welcome from "./components/Welcome";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <AboutMe />
         </InfoCard>
       </Container>
+      <Footer />
     </div>
   );
 }
