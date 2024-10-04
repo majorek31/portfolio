@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useRef, useState } from "react";
 
 import CloseCross from "../assets/cross.svg";
 
@@ -32,10 +32,17 @@ export function ModalProvider({ children }: ModalProviderType) {
     setIsOpen(false);
     setModalContent(null);
   };
-  document.addEventListener("keydown", (e: KeyboardEvent) => {
-    console.log(e.key);
-    if (e.key == "Escape") closeModal();
-  });
+
+  useEffect(() => {
+    const handleKeydown = (e: KeyboardEvent) => {
+      if (e.key == "Escape") closeModal();
+    };
+    document.addEventListener("keydown", handleKeydown);
+    return () => {
+      document.removeEventListener("keydown", handleKeydown);
+    };
+  }, []);
+
   return (
     <ModalContext.Provider
       value={{ openModal, closeModal, isOpen, modalContent, title }}
