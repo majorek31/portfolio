@@ -1,5 +1,5 @@
-import GithubWhite from "../assets/github-mark.png";
-import MajorekIcon from "../assets/majorek-icon.png";
+import GithubWhite from "../assets/github-mark.webp";
+import MajorekIcon from "../assets/majorek-icon.webp";
 
 type HeaderProps = {};
 

@@ -1,3 +1,5 @@
+import MajorekIcon from "../assets/majorek-icon.webp";
+
 type AboutMeProps = {};
 
 export default function AboutMe({}: AboutMeProps) {
@@ -38,7 +40,7 @@ export default function AboutMe({}: AboutMeProps) {
       </div>
       <img
         className="md:border-l-4 max-sm:border-t-4 m-2"
-        src="https://avatars.githubusercontent.com/u/76913151?v=4"
+        src={MajorekIcon}
         alt="majorek"
       />
     </div>
