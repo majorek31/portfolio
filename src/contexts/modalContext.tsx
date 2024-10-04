@@ -32,7 +32,7 @@ export function ModalProvider({ children }: ModalProviderType) {
     setIsOpen(false);
     setModalContent(null);
   };
-
+  
   useEffect(() => {
     const handleKeydown = (e: KeyboardEvent) => {
       if (e.key == "Escape") closeModal();

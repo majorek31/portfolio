@@ -4,14 +4,13 @@ import { useModal } from "../contexts/modalContext";
 export default function ContactModal() {
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
+  const [hasAgreement, setHasAgreement] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const { closeModal } = useModal();
-
   const onFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
-
     // closeModal();
   };
   return (
@@ -32,6 +31,17 @@ export default function ContactModal() {
             placeholder="Hello, I'm contacting You about..."
             onChange={(e) => setMessage(e.target.value)}
           />
+          <div className="flex items-center">
+            <input
+              type="checkbox"
+              checked={hasAgreement}
+              className="px-4 py-2 mr-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="e-mail"
+              onChange={(e) => setHasAgreement(e.target.checked)}
+              id="agreement"
+            />
+            <label htmlFor="agreement">I agree to the ToS</label>
+          </div>
           <button className="px-4 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 flex justify-center items-center gap-x-2">
             {isLoading ? (
               <>
