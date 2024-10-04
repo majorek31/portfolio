@@ -4,6 +4,7 @@ import Container from "./components/Container";
 import InfoCard from "./components/InfoCard";
 import Welcome from "./components/Welcome";
 import Footer from "./components/Footer";
+import ContactMe from "./components/ContactMe";
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
           <AboutMe />
         </InfoCard>
         <InfoCard>
-          <AboutMe />
+          <ContactMe />
         </InfoCard>
       </Container>
       <Footer />
