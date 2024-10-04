@@ -1,4 +1,4 @@
-import MajorekIcon from "../assets/majorek-icon.webp";
+import MajorekIcon from "../assets/user-icon.svg";
 
 type AboutMeProps = {};
 
@@ -39,7 +39,7 @@ export default function AboutMe({}: AboutMeProps) {
         </ul>
       </div>
       <img
-        className="md:border-l-4 max-sm:border-t-4 m-2"
+        className="md:border-l-4 max-sm:border-t-4 m-2 size-96"
         src={MajorekIcon}
         alt="majorek"
       />

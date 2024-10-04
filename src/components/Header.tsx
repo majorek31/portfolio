@@ -1,5 +1,5 @@
 import GithubWhite from "../assets/github-mark.webp";
-import MajorekIcon from "../assets/majorek-icon.webp";
+import MajorekIcon from "../assets/user-icon.svg";
 
 type HeaderProps = {};
 
@@ -9,7 +9,7 @@ export default function Header({}: HeaderProps) {
       <div className="max-lg:hidden w-full flex justify-evenly items-center p-4 shadow-lg">
         <div className="flex justify-start items-center gap-3 w-1/3">
           <a href="#">
-            <img className="w-10" src={MajorekIcon} alt="majorek's duck icon" />
+            <img className="size-6" src={MajorekIcon} alt="majorek's duck icon" />
           </a>
           <h1 className="text-2xl w-1/3">majorek</h1>
         </div>
